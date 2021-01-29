@@ -31,4 +31,23 @@ async function saveUrl(req, res, next) {
   }
 }
 
-module.exports = { saveUrl };
+async function retrieveSavedUrlIfAvailable(req, res, next) {
+  try {
+    const { shortUrl } = req.params;
+
+    const result = await shortster.findOne({ origin_short: shortUrl }).exec();
+
+    if (result === null) {
+      res.status(404).send({
+        code: 404,
+        message: 'This shortURL does not exist in our database.',
+      });
+    }
+
+    res.status(200).send(result.origin);
+  } catch (error) {
+    next(error);
+  }
+}
+
+module.exports = { saveUrl, retrieveSavedUrlIfAvailable };
