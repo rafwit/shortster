@@ -5,8 +5,15 @@ function handleError(error, _, response, next) {
       message: error.response.data.message,
     });
   } else {
-    response.status(500).send('Something went wrong');
+    next();
   }
 }
 
-module.exports = { handleError };
+function handleShortUrlNotFoundError(response) {
+  response.status(404).send({
+    code: 404,
+    message: 'This shortURL does not exist in our database.',
+  });
+}
+
+module.exports = { handleError, handleShortUrlNotFoundError };
