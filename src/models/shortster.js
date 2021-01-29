@@ -4,11 +4,16 @@
 
 const mongoose = require('.');
 
-const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 
-const addressSchema = new Schema({
+const shortsterSchema = new Schema({
   origin: String,
-  origin_short: String,
+  origin_short: {
+    type: String,
+    unique: true,
+    maxlength: 6,
+    minlength: 4,
+  },
   created_at: {
     type: Date,
     default: Date.now,
@@ -17,6 +22,6 @@ const addressSchema = new Schema({
   last_clicked: Number,
 });
 
-const Address = mongoose.model('Address', addressSchema);
+const Shortster = mongoose.model('Shortster', shortsterSchema);
 
-module.exports = Address;
+module.exports = Shortster;
