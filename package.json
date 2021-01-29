@@ -2,25 +2,36 @@
   "name": "shortster-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "client/App.js",
   "scripts": {
-    "dev": "nodemon src/server/index.js",
+    "dev:server": "nodemon src/server/index.js",
+    "dev:client": "parcel client/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-eslint": "^10.1.0",
     "commitizen": "^4.2.3",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.18.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.7",
+    "parcel-bundler": "^1.12.4",
     "prettier": "^2.2.1"
   },
   "config": {
@@ -32,6 +43,8 @@
     "dotenv": "^8.2.0",
     "eslint-plugin-prettier": "^3.3.1",
     "express": "^4.17.1",
-    "mongoose": "^5.11.13"
+    "mongoose": "^5.11.13",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
