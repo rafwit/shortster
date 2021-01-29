@@ -1,6 +1,7 @@
 const shortster = require('../models/shortster');
 
-const { generateUniqueShortcode } = require('../helpers/functions');
+const { generateUniqueShortcode } = require('../helpers/shortcode.generators');
+const { searchForShortUrl } = require('../helpers/db.interactions');
 
 async function saveUrl(req, res, next) {
   try {
@@ -33,21 +34,18 @@ async function saveUrl(req, res, next) {
 
 async function retrieveSavedUrlIfAvailable(req, res, next) {
   try {
-    const { shortUrl } = req.params;
-
-    const result = await shortster.findOne({ origin_short: shortUrl }).exec();
-
-    if (result === null) {
-      res.status(404).send({
-        code: 404,
-        message: 'This shortURL does not exist in our database.',
-      });
-    }
+    const result = await searchForShortUrl(req, res);
+    await shortster.updateMany({
+      $inc: { numbers_clicked: 1 },
+      last_clicked: Date.now(),
+    });
 
     res.status(200).send(result.origin);
   } catch (error) {
     next(error);
   }
 }
-
-module.exports = { saveUrl, retrieveSavedUrlIfAvailable };
+module.exports = {
+  saveUrl,
+  retrieveSavedUrlIfAvailable,
+};
