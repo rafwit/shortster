@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 const conf = require('../config');
 
-mongoose.connect(`${conf.dbUrl}${conf.dbName}`, {
+const currentDb =
+  process.env.NODE_ENV === 'test' ? conf.testDbName : conf.dbName;
+
+mongoose.connect(`${conf.dbUrl}${currentDb}`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,

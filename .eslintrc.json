@@ -1,12 +1,20 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true
   },
-  "extends": ["standard", "prettier", "plugin:prettier/recommended"],
+  "extends": [
+    "standard",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "module"
   },
+  "plugins": ["jest"],
   "rules": {}
 }
