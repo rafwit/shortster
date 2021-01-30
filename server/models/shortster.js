@@ -6,21 +6,31 @@ const mongoose = require('.');
 
 const { Schema } = mongoose;
 
-const shortsterSchema = new Schema({
-  origin: String,
-  origin_short: {
-    type: String,
-    unique: true,
-    maxlength: 6,
-    minlength: 4,
+const shortsterSchema = new Schema(
+  {
+    origin: {
+      required: false,
+      type: String,
+    },
+    origin_short: {
+      required: true,
+      type: String,
+      unique: true,
+      maxlength: 6,
+      minlength: 4,
+    },
+    created_at: {
+      required: true,
+      type: Date,
+      default: Date.now,
+    },
+    numbers_clicked: Number,
+    last_clicked: Number,
   },
-  created_at: {
-    type: Date,
-    default: Date.now,
-  },
-  numbers_clicked: Number,
-  last_clicked: Number,
-});
+  {
+    versionKey: false,
+  }
+);
 
 const Shortster = mongoose.model('Shortster', shortsterSchema);
 
