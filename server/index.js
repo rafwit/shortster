@@ -7,6 +7,8 @@ const logger = require('morgan');
 const router = require('./router');
 const conf = require('./config');
 
+const PORT = process.env.NODE_ENV === 'test' ? conf.TEST_PORT : conf.PORT;
+
 app.use(
   logger(':method :url :status :res[content-length] - :response-time ms')
 );
@@ -15,8 +17,8 @@ app.use(router);
 
 (async function () {
   try {
-    app.listen(conf.PORT, () => {
-      console.log(`✅ Server is listening at http://localhost:${conf.PORT}`);
+    app.listen(PORT, () => {
+      console.log(`✅ Server is listening at http://localhost:${PORT}`);
     });
     await db;
     db.connection.on('connected', () => {
