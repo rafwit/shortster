@@ -5,7 +5,7 @@ const { searchForShortUrl } = require('../helpers/db.interactions');
 
 async function saveUrl(req, res, next) {
   try {
-    const { originUrl, customUrl, createdAt } = req.body;
+    const { originUrl, customUrl } = req.body;
 
     let shortUrl = '';
 
@@ -21,7 +21,7 @@ async function saveUrl(req, res, next) {
     const result = await shortster.create({
       origin: originUrl,
       origin_short: shortUrl,
-      created_at: createdAt,
+      created_at: Date.now(),
       numbers_clicked: 0,
       last_clicked: 0,
     });
