@@ -15,7 +15,7 @@ router.get('/:shortUrl/stats', serveStatsForShortUrl);
 
 router.get('*', handleErrorGeneric);
 router.get('*', (req, res) => {
-  res.status(404).send("We're sorry, the requested page was not found");
+  res.status(404).send("We're sorry, the requested route was not found");
 });
 
 module.exports = router;
