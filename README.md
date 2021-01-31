@@ -4,7 +4,7 @@ This docs present the Shortster API - URL shortening service. Its MVP, tech-stac
 
 ---
 
-### 🔎`Table of contenets`
+### 🔎 Table of contenets
 
 1. [Getting started](#getting-started)
 2. [User stories](#user-stories)
@@ -43,21 +43,21 @@ API gives the user ability to:
 
 ### MVP
 
-✅ User can submit an URL and receive a unique shortcode in response. 
+✅ User can submit an URL and receive a unique shortcode in response.
 
-✅ User can submit an URL and shortcode and will receive the chosen shortcode if available. 
+✅ User can submit an URL and shortcode and will receive the chosen shortcode if available.
 
-✅ User can access a `/:shortcode` endpoint and be redirected to the URL associated with that 
+✅ User can access a `/:shortcode` endpoint and be redirected to the URL associated with that
 
-​	shortcode, if exists. 
+​ shortcode, if exists.
 
-✅ All shortcodes can contain digits, uppercase and lowercase letters. It is case sensitive. 
+✅ All shortcodes can contain digits, uppercase and lowercase letters. It is case sensitive.
 
-✅ Automatically allocated shortcodes are exactly 6 characters long. 
+✅ Automatically allocated shortcodes are exactly 6 characters long.
 
-✅ User submitted shortcodes must be at least 4 characters long. 
+✅ User submitted shortcodes must be at least 4 characters long.
 
-✅ User can access a `/:shortcode/stats` endpoint in order to see when the shortcode was registered last 	accessed, and how many times it was used. 
+✅ User can access a `/:shortcode/stats` endpoint in order to see when the shortcode was registered last accessed, and how many times it was used.
 
 ---
 
@@ -199,16 +199,16 @@ Shortster includes extensive test suit.
   - Shortcode generators
   - Data model
 
-------------
+---
 
 ### Next steps
 
 This part describes proposed next steps to take in order to further develop Shortster.
 
- 💡 Develop browser client layer to increase user base
+💡 Develop browser client layer to increase user base
 
- 💡 Develop cache to improve performance
+💡 Develop cache to improve performance
 
- 💡 Add authentication and authorization for increased security
+💡 Add authentication and authorization for increased security
 
- 💡 Add e2e tests for maintance and stability
+💡 Add e2e tests for maintance and stability
