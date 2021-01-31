@@ -28,4 +28,8 @@ async function validateIfShotUrlIsAvailable(url) {
   return await shortster.findOne({ origin_short: url }).exec();
 }
 
-module.exports = { generateUniqueShortcode };
+module.exports = {
+  generateUniqueShortcode,
+  getRandomNumberInRange,
+  validateIfShotUrlIsAvailable,
+};

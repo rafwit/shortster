@@ -1,4 +1,4 @@
-function handleError(error, _, response, next) {
+function handleErrorGeneric(error, _, response, next) {
   if (error.response) {
     response.status(error.response.data.statusCode).send({
       code: error.response.data.statusCode,
@@ -16,4 +16,4 @@ function handleShortUrlNotFoundError(response) {
   });
 }
 
-module.exports = { handleError, handleShortUrlNotFoundError };
+module.exports = { handleErrorGeneric, handleShortUrlNotFoundError };
