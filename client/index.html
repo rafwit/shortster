@@ -3,11 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="main.css" />
     <title>URL Shortster</title>
   </head>
   <body>
-    <div id="root">not rendered</div>
-    <script src="./components/App.js"></script>
+    <div class="header"></div>
+
+    <main>
+      <div class="url_services">
+        <div class="url_services__crete">
+          <h2 class="url_services__title"></h2>
+          <form
+            action="/http://localhost:3001"
+            method="POST"
+            class="url_services__create--form"
+          >
+            <label for="originUrl">Original URL</label>
+            <input type="text" id="originUrl" name="originUrl" />
+            <label for="customUrl">Your Shortster</label>
+            <input type="text" id="customUrl" name="customUrl" />
+          </form>
+
+          <div class="url_services__use_url">
+            <h2 class="url_services__title"></h2>
+          </div>
+
+          <div class="url_services__url_stats">
+            <h2 class="url_services__title"></h2>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>FOOTER</footer>
   </body>
 </html>
