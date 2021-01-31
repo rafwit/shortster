@@ -18,13 +18,20 @@ This docs present the Shortster API - URL shortening service. Its MVP, tech-stac
 
 ### Getting started
 
-Starting Shorster is very easy. Just run these commands in your terminal.
+Starting Shorster is very easy. Just run these commands in your terminal:
 
 ```bash
 https://github.com/rafwit/shortster
 cd shortster
 npm install
 npm start
+```
+
+Next, make sure you have [MongoDB](https://www.mongodb.com/) running locally. </br>
+If you are using [Docker](https://docs.docker.com/) just run:
+
+```bash
+docker run --name fun-mongo -dit -p 27017:27017 --rm mongo:4.4.1
 ```
 
 Then navigate to `http://localhost:3001`
@@ -49,7 +56,7 @@ API gives the user ability to:
 
 ✅ User can access a `/:shortcode` endpoint and be redirected to the URL associated with that
 
-​ shortcode, if exists.
+ shortcode, if exists.
 
 ✅ All shortcodes can contain digits, uppercase and lowercase letters. It is case sensitive.
 
