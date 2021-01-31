@@ -77,7 +77,7 @@ As Shortster is as microservice in Movingworlds environment, hence assumption wa
 
 #### ➡ POST `'/'`
 
-Get shortcode of your an URL
+Get shortcode of your URL
 
 ##### Request body example value
 
