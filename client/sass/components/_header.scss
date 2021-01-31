@@ -1,0 +1,13 @@
+.header {
+  background-color: $color-primary;
+  color: $color-white;
+
+  height: 6rem;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  position: fixed;
+}

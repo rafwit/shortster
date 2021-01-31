@@ -1,0 +1,125 @@
+*,
+**::after,
+**::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+}
+
+main {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 2.2rem;
+  color: #1e4b5b;
+}
+
+.header__text {
+  align-self: center;
+  letter-spacing: 0.4rem;
+  font-weight: 200;
+}
+
+.url_services__title--create,
+.url_services__title--use,
+.url_services__title--stats {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.header {
+  background-color: #43bce7;
+  color: #ffffff;
+  height: 6rem;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+}
+
+.url_services {
+  align-self: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.url_services__create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.url_services__title--container {
+  position: relative;
+  width: 100%;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.url_services__form--button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.url_services__form--create-origin {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.url_services__form--create-custom {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.url_services__form--create-button {
+  margin-top: 2rem;
+  width: auto;
+}
+.url_services__use_url--input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.url_services__stats_url--input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

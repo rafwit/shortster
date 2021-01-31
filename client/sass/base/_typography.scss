@@ -1,0 +1,20 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 2.2rem;
+  color: $color-secondary;
+}
+
+.header__text {
+  align-self: center;
+
+  letter-spacing: 0.4rem;
+  font-weight: 200;
+}
+
+.url_services__title--create,
+.url_services__title--use,
+.url_services__title--stats {
+  font-size: 2.5rem;
+  font-weight: 400;
+}

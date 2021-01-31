@@ -7,29 +7,56 @@
     <title>URL Shortster</title>
   </head>
   <body>
-    <div class="header"></div>
+    <div class="header">
+      <h1 class="header__text">URL Shortster Dashboard</h1>
+    </div>
 
     <main>
       <div class="url_services">
         <div class="url_services__crete">
-          <h2 class="url_services__title"></h2>
-          <form
-            action="/http://localhost:3001"
-            method="POST"
-            class="url_services__create--form"
-          >
-            <label for="originUrl">Original URL</label>
-            <input type="text" id="originUrl" name="originUrl" />
-            <label for="customUrl">Your Shortster</label>
-            <input type="text" id="customUrl" name="customUrl" />
-          </form>
-
-          <div class="url_services__use_url">
-            <h2 class="url_services__title"></h2>
+          <div class="url_services__title--container">
+            <h2 class="url_services__title--create">Create your Shortster</h2>
           </div>
+          <div class="url_service__form">
+            <form id="url_service__form">
+              <div class="url_services__form--create-origin">
+                <label for="originUrl">Original URL</label>
+                <input type="text" id="originUrl" name="originUrl" />
+              </div>
+              <div class="url_services__form--create-custom">
+                <label for="customUrl">Your Shortster</label>
+                <input type="text" id="customUrl" name="customUrl" />
+              </div>
+              <div class="url_services__form--button-container">
+                <button
+                  form="url_service__form"
+                  class="url_services__form--create-button"
+                >
+                  SUBMIT
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="url_services__use_url">
+          <div class="url_services__title--container">
+            <h2 class="url_services__title--use">Use Shortster</h2>
+          </div>
+          <div class="url_services__use_url--input">
+            <label for="useUrl">Your Shortster</label>
+            <input type="text" id="useUrl" name="useUrl" />
+          </div>
+        </div>
 
-          <div class="url_services__url_stats">
-            <h2 class="url_services__title"></h2>
+        <div class="url_services__url_stats">
+          <div class="url_services__title--container">
+            <h2 class="url_services__title--stats">
+              Discover your Shortster's stats
+            </h2>
+          </div>
+          <div class="url_services__stats_url--input">
+            <label for="statsUrl">Your Shortster</label>
+            <input type="text" id="statsUrl" name="statsUrl" />
           </div>
         </div>
       </div>

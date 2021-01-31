@@ -1,0 +1,54 @@
+.url_services {
+  // margin-top: 2rem;
+  align-self: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__create {
+    @include flexCenterChildrenItems();
+  }
+
+  &__title--container {
+    position: relative;
+    width: 100%;
+    padding: 3rem 0;
+    @include flexCenterChildrenItems();
+  }
+
+  &__title--create {
+  }
+  &__title--use {
+  }
+  &__title--stats {
+  }
+
+  &__form {
+    &--button-container {
+      @include flexCenterChildrenItems();
+    }
+
+    &--create {
+      &-origin {
+        padding-top: 1rem;
+        @include flexCenterChildrenItems();
+      }
+      &-custom {
+        padding-top: 1rem;
+        @include flexCenterChildrenItems();
+      }
+      &-button {
+        margin-top: 2rem;
+        width: auto;
+      }
+    }
+  }
+
+  &__use_url--input {
+    @include flexCenterChildrenItems();
+  }
+  &__stats_url--input {
+    @include flexCenterChildrenItems();
+  }
+}
