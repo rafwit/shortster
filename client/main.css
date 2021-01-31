@@ -60,6 +60,15 @@ body {
   font-weight: 400;
 }
 
+.url_services__form--create {
+  font-size: 1.5rem;
+}
+.url_services__form--create-input {
+  font-size: 1.2rem;
+  font-family: inherit;
+  color: inherit;
+}
+
 .header {
   background-color: #43bce7;
   color: #ffffff;
@@ -67,9 +76,14 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 100;
   display: flex;
   justify-content: center;
   position: fixed;
+}
+
+label {
+  padding-bottom: 1rem;
 }
 
 .url_services {
@@ -78,36 +92,52 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  width: 100vw;
+  top: 5rem;
 }
 .url_services__create {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: burlywood;
 }
 .url_services__title--container {
   position: relative;
   width: 100%;
-  padding: 3rem 0;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.url_services__form {
+  margin: 1rem 0;
+  width: 100%;
 }
 .url_services__form--button-container {
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.url_services__form--create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
 }
 .url_services__form--create-origin {
-  padding-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 40%;
+  border: none;
+  height: 2.8rem;
+  border-bottom: 0.2rem solid #43bce7;
 }
 .url_services__form--create-custom {
-  padding-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 10%;
+  border: none;
+  height: 2.8rem;
+  border-bottom: 0.2rem solid #43bce7;
 }
 .url_services__form--create-button {
   margin-top: 2rem;
@@ -122,4 +152,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.url_services__use_url {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: cornflowerblue;
+  padding-bottom: 2rem;
+}
+.url_services__use_url--input {
+  border: none;
+  height: 2.8rem;
+  border-bottom: 0.2rem solid #43bce7;
 }

@@ -7,25 +7,35 @@
     <title>URL Shortster</title>
   </head>
   <body>
-    <div class="header">
+    <header class="header">
       <h1 class="header__text">URL Shortster Dashboard</h1>
-    </div>
+    </header>
 
     <main>
       <div class="url_services">
-        <div class="url_services__crete">
+        <div class="url_services__create">
           <div class="url_services__title--container">
             <h2 class="url_services__title--create">Create your Shortster</h2>
           </div>
-          <div class="url_service__form">
-            <form id="url_service__form">
-              <div class="url_services__form--create-origin">
+          <div class="url_services__form">
+            <form id="url_services__form">
+              <div class="url_services__form--create">
                 <label for="originUrl">Original URL</label>
-                <input type="text" id="originUrl" name="originUrl" />
+                <input
+                  class="url_services__form--create-origin"
+                  type="text"
+                  id="originUrl"
+                  name="originUrl"
+                />
               </div>
-              <div class="url_services__form--create-custom">
+              <div class="url_services__form--create">
                 <label for="customUrl">Your Shortster</label>
-                <input type="text" id="customUrl" name="customUrl" />
+                <input
+                  class="url_services__form--create-custom"
+                  type="text"
+                  id="customUrl"
+                  name="customUrl"
+                />
               </div>
               <div class="url_services__form--button-container">
                 <button
@@ -42,9 +52,14 @@
           <div class="url_services__title--container">
             <h2 class="url_services__title--use">Use Shortster</h2>
           </div>
-          <div class="url_services__use_url--input">
+          <div class="url_services__use_url--containter">
             <label for="useUrl">Your Shortster</label>
-            <input type="text" id="useUrl" name="useUrl" />
+            <input
+              class="url_services__use_url--input"
+              type="text"
+              id="useUrl"
+              name="useUrl"
+            />
           </div>
         </div>
 

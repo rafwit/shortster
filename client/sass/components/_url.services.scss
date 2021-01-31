@@ -1,19 +1,27 @@
+label {
+  padding-bottom: 1rem;
+}
+
 .url_services {
-  // margin-top: 2rem;
   align-self: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  width: 100vw;
+  top: 5rem;
 
   &__create {
+    width: 100%;
     @include flexCenterChildrenItems();
+    background-color: burlywood;
   }
 
   &__title--container {
     position: relative;
     width: 100%;
-    padding: 3rem 0;
+    padding-top: 2rem;
     @include flexCenterChildrenItems();
   }
 
@@ -25,19 +33,26 @@
   }
 
   &__form {
+    margin: 1rem 0;
+    width: 100%;
+
     &--button-container {
+      padding-bottom: 2rem;
       @include flexCenterChildrenItems();
     }
 
     &--create {
+      @include flexCenterChildrenItems();
+      padding: 1rem 0;
       &-origin {
-        padding-top: 1rem;
-        @include flexCenterChildrenItems();
+        width: 40%;
+        @include inputField();
       }
       &-custom {
-        padding-top: 1rem;
-        @include flexCenterChildrenItems();
+        width: 10%;
+        @include inputField();
       }
+
       &-button {
         margin-top: 2rem;
         width: auto;
@@ -50,5 +65,16 @@
   }
   &__stats_url--input {
     @include flexCenterChildrenItems();
+  }
+
+  &__use_url {
+    @include flexCenterChildrenItems();
+    width: 100%;
+    background-color: cornflowerblue;
+    padding-bottom: 2rem;
+
+    &--input {
+      @include inputField();
+    }
   }
 }

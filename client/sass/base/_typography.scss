@@ -18,3 +18,13 @@ body {
   font-size: 2.5rem;
   font-weight: 400;
 }
+
+.url_services__form--create {
+  font-size: 1.5rem;
+
+  &-input {
+    font-size: 1.2rem;
+    font-family: inherit;
+    color: inherit;
+  }
+}
