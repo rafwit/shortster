@@ -4,15 +4,15 @@ This docs present the Shortster API - URL shortening service. Its MVP, tech-stac
 
 ---
 
-### 🔎 Table of contenets
+### Table of contenets
 
-1. [Getting started](#getting-started)
-2. [User stories](#user-stories)
-3. [MVP](#mvp)
-4. [Decision process](#decision-process)
-5. [API Documentation](#api-documentation)
-6. [Tests](#tests)
-7. [Next steps](#next-steps)
+📍 [Getting started](#getting-started) </br>
+📍 [User stories](#user-stories) </br>
+📍 [MVP](#mvp) </br>
+📍 [Decision process](#decision-process) </br>
+📍 [API Documentation](#api-documentation) </br>
+📍 [Tests](#tests) </br>
+📍 [Next steps](#next-steps) </br>
 
 ---
 
