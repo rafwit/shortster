@@ -46,7 +46,7 @@ describe('Controllers and Models - integration tests', () => {
         .expect(200)
         .then((response) => {
           expect(response.statusCode).toBe(200);
-          expect(response.text).toBe('www.movingworlds.org');
+          expect(response.text).toBe('{"origin":"www.movingworlds.org"}');
         });
     });
 
