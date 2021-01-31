@@ -40,7 +40,7 @@ async function retrieveSavedUrlIfAvailable(req, res, next) {
       last_clicked: Date.now(),
     });
 
-    res.status(200).send(result.origin);
+    res.status(200).send({ origin: result.origin });
   } catch (error) {
     next(error);
   }
