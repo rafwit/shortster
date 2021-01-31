@@ -7,7 +7,7 @@
     "compile:dev": "sass client/styles/sass/main.scss:client/styles/main.css --no-source-map",
     "dev:server": "nodemon src/server/index.js",
     "dev:client": "parcel client/index.html",
-    "test": "NODE_ENV=test jest  --detectOpenHandles --runInBand --forceExit "
+    "test": "NODE_ENV=test jest -i --detectOpenHandles"
   },
   "keywords": [],
   "author": "",
