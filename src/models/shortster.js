@@ -9,7 +9,7 @@ const { Schema } = mongoose;
 const shortsterSchema = new Schema(
   {
     origin: {
-      required: false,
+      required: true,
       type: String,
     },
     origin_short: {
