@@ -1,7 +1,7 @@
 const request = require('supertest');
-const app = require('../../server');
-const db = require('../models/index');
-const shortster = require('../models/shortster');
+const app = require('../..');
+const db = require('../../models/index');
+const shortster = require('../../models/shortster');
 
 const mockUrlData = [
   {

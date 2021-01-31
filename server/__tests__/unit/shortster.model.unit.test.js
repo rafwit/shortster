@@ -1,5 +1,5 @@
-const db = require('../models/index');
-const shortster = require('../models/shortster');
+const db = require('../../models/index');
+const shortster = require('../../models/shortster');
 
 let testShortUrlOne;
 let testShortUrlTwo;
